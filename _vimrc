@@ -8,6 +8,8 @@ set autochdir                                                  "自動切換當前目錄
 set mouse=nv                                                   "在 Normal mode 和 Visual mode 中使用滑鼠 
 set nobackup                                                   "用git管理備份, 所以 不要備份文件,如~index.php  
 set hidden                                                     "允許在有未保存的修改時切換緩衝區，此時的修改由 vim 負責保存
+nnoremap <Left> :bp<CR>                                        "使用左光標鍵切換 buffer
+nnoremap <Right> :bn<CR>                                       "使用右光標鍵切換 buffer
 behave mswin
 nnoremap <F12> :TlistToggle<CR>
 nmap <F8>   :TrinityToggleAll<CR>
@@ -17,7 +19,6 @@ let g:miniBufExplMapWindowNavVim = 1
 let g:miniBufExplMapWindowNavArrows = 1 
 let g:miniBufExplMapCTabSwitchBufs = 1 
 let g:miniBufExplModSelTarget = 1 
-
 function MyDiff()
   let opt = '-a --binary '
   if &diffopt =~ 'icase' | let opt = opt . '-i ' | endif
