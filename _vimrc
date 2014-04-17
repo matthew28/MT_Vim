@@ -1,6 +1,13 @@
 set nocompatible
 source $VIMRUNTIME/vimrc_example.vim
 source $VIMRUNTIME/mswin.vim
+set cursorline                                                " 突出顯示當前行
+set number                                                    " 顯示行號
+set tags=C:\git_test\akm\akm_0304_1\tags;                      "設定tag 檔的位置
+set autochdir                                                  "自動切換當前目錄為當前文件所在的目錄
+set mouse=nv                                                   "在 Normal mode 和 Visual mode 中使用滑鼠 
+set nobackup                                                   "用git管理備份, 所以 不要備份文件,如~index.php  
+set hidden                                                     "允許在有未保存的修改時切換緩衝區，此時的修改由 vim 負責保存
 behave mswin
 nnoremap <F12> :TlistToggle<CR>
 nmap <F8>   :TrinityToggleAll<CR>
