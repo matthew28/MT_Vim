@@ -3,6 +3,7 @@ source $VIMRUNTIME/vimrc_example.vim
 source $VIMRUNTIME/mswin.vim
 behave mswin
 nnoremap <F12> :TlistToggle<CR>
+nmap <F8>   :TrinityToggleAll<CR>
 nnoremap <F5>  :NERDTreeToggle<CR>
 nnoremap <silent> <F3> :Grep<CR>
 set diffexpr=MyDiff()
