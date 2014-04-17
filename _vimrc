@@ -2,7 +2,8 @@ set nocompatible
 source $VIMRUNTIME/vimrc_example.vim
 source $VIMRUNTIME/mswin.vim
 behave mswin
-
+nnoremap <F5>  :NERDTreeToggle<CR>
+nnoremap <silent> <F3> :Grep<CR>
 set diffexpr=MyDiff()
 function MyDiff()
   let opt = '-a --binary '
