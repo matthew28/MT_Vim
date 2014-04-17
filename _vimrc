@@ -11,9 +11,13 @@ set hidden                                                     "允許在有未保存的
 behave mswin
 nnoremap <F12> :TlistToggle<CR>
 nmap <F8>   :TrinityToggleAll<CR>
-nnoremap <F5>  :NERDTreeToggle<CR>
-nnoremap <silent> <F3> :Grep<CR>
+nnoremap <silent> <F5> :Grep<CR>
 set diffexpr=MyDiff()
+let g:miniBufExplMapWindowNavVim = 1 
+let g:miniBufExplMapWindowNavArrows = 1 
+let g:miniBufExplMapCTabSwitchBufs = 1 
+let g:miniBufExplModSelTarget = 1 
+
 function MyDiff()
   let opt = '-a --binary '
   if &diffopt =~ 'icase' | let opt = opt . '-i ' | endif
